@@ -19,11 +19,12 @@ RUN \
     cd /usr/local/upsource && \
     curl -L https://download.jetbrains.com/upsource/upsource-${UPSOURCE_VERSION}.zip > upsource.zip && \
     unzip upsource.zip && \
+    cp -r upsource-*/* . && \
     rm -rf internal/java/linux-x64/man && \
     rm -rf internal/java/mac-x64 && \
     rm -rf internal/java/windows-amd64 && \
     echo "$UPSOURCE_VERSION" > version.docker.image && \
-    rm -f upsource.zip && \
+    rm -fr upsource* && \
     chown -R upsource:upsource /usr/local/upsource && \
     chmod -R u+rwxX /usr/local/upsource/internal/java/linux-x64
 
