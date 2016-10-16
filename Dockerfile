@@ -12,7 +12,7 @@ RUN \
 COPY entry-point.sh /entry-point.sh
 
 RUN \
-    export UPSOURCE_VERSION=3.0.4291 && \
+    export UPSOURCE_VERSION=3.0.4421 && \
     mkdir -p /usr/local && \
     mkdir -p /var/lib/upsource && \
     mkdir -p /usr/local/upsource && \
